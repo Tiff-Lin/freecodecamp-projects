@@ -1,0 +1,210 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div class="container">
+ 
+  
+  <header>
+  <h1 id="title">Covid Vaccine Survey Form</h1>
+  <p id="description">Let us know what you think about the COVID-19 vaccine </p>
+ </header>
+  
+<form id="survey-form">
+ <div>
+  <label id="name-label" for="name">Name </label><br>
+  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+ </div>
+   
+ <div>
+  <label id="email-label" for="email">Email</label><br>
+   <input type="email" id="email" name="email" placeholder="Enter your email" required>
+ </div>
+ <div>
+   <label id="number-label" for="number">Age (optional)</label><br>
+   <input type="number" id="number" name="number-label" min="1" max="100" placeholder="Age">
+ </div>
+   
+ <div>
+   <p>What is your view on vaccination?</p>
+   
+   <input type="radio" id="very-positive" name="view" value="very-positive" class="radio-button">
+    <label for="very-positive">Very Positive</label><br> 
+    <input type="radio" id="fairly-positive" name="view" value="fairly-positive" class="radio-button">
+    <label for="fairly-positive">Fairly Positive</label><br>
+    <input type="radio" id="neutral" name="view" value="neutral" class="radio-button">
+    <label for="neutral">Neutral</label><br>
+    <input type="radio" id="fairly-negative" name="view" value="fairly-negative" class="radio-button">
+    <label for="fairly-negative">Fairly Negative</label><br>
+    <input type="radio" id="very-negative" name="view" value="very-negative" class="radio-button">
+    <label for="very-negative">Very Negative</label><br>
+ </div>  
+   
+ <div>
+  <p>Please tell us about your religion or beliefs:</p>
+   <select id="dropdown" name="religion" required>
+      <option value="Buddhist">Buddhist</option>
+      <option value="Christian">Christian</option>
+      <option value="Hindu">Hindu</option>
+      <option value="Jewish">Jewish</option>
+      <option value="Sikh">Sikh</option>
+      <option value="No-religion">No religion</option>
+      <option value="other">Other</option>
+      <option value="prefer-not-say">I'd prefer not to say</option>
+   </select>  
+ </div>
+    
+ <div>
+   <p>If you would not want to be vaccinated, what would be your motivation for refusing the vaccine? (check all that apply)</p> 
+   <label><input name="reason" value="health-reasons" type="checkbox">I can't be vaccinated for health reasons</label><br>
+   <label><input name="reason" value="against-vaccine" type="checkbox" class="radio-button">I'm against vaccines in general</label><br>
+   <label><input name="reason" value="safety" type="checkbox" class="radio-button">I don't think the vaccine will be safe</label><br>
+   <label><input name="reason" value="efficacy" type="checkbox" class="radio-button">I don't think the vaccine will be effective</label><br>
+   <label><input name="reason" value="intention" type="checkbox" class="radio-button">I don't trust the intentions behind the vaccine</label><br>
+   <label><input name="reason" value="wait" type="checkbox" class="radio-button">I would want to wait until others have had it first</label><br>
+   <label><input name="reason" value="unsure" type="checkbox" class="radio-button">Dont' know/not sure</label><br>
+ </div>
+ 
+ <div>
+   <p>Any comments?</p>
+   <textarea id="comments" name="comment" placeholder="Enter your comment here..."></textarea>
+ </div>
+ <div>
+    <button type="submit" id="submit">Submit</button>
+  </div>
+ </form>
+</div>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
+body {
+  background: #FFE4C4;
+}
+
+
+header {
+  margin-left: 10px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Train One', cursive;
+  font-size: 20px;
+  color: brown;
+  max-width: 100%;
+  height: auto;
+}
+
+
+form {
+  background: #FFEBCD;
+  box-sizing: border-box;
+  max-width: 600px;
+  border: 3px solid #ffb863;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 0 auto;
+  line-height: 1.5;
+  
+}
+
+.radio-button{
+  cursor: pointer;
+}
+
+#name-label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#email-label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#number-label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#name {
+  box-sizing: border-box;
+  width: 600px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+#email {
+  box-sizing: border-box;
+  width: 600px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+#number {
+  box-sizing: border-box;
+  width: 600px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+input[type="radio"] {
+  display: 
+}
+
+#dropdown {
+  box-sizing: border-box;
+  width: 600px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#comments {
+  box-sizing: border-box;
+  width: 600px;
+  height: 150px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  border: 1px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+button {
+  box-sizing: border-box;
+  width: 600px;
+  height: 45px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px;
+  border-radius: 10px;
+  background-color: #cc7916;
+  max-width: 100%;
+}
+
+button:hover {
+  background-color: #e3891e;
+  cursor: pointer;
+}
+
+#submit{
+  font-size: 15px;
+  color: white;
+}
